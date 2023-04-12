@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import apiClinet from '../services/api.clinet';
+import {Text} from '@chakra-ui/react'
 
 interface Game{
     id: number;
@@ -22,9 +23,12 @@ apiClinet.get<FetchGamesResponse>('/games')
 })
 
   return (
+    <>
+   {error && <Text>{error}</Text>}
     <ul>
         {games.map(game => <li key={game.id}>{game.name}</li>)}
     </ul>
+    </>
   )
 }
 
