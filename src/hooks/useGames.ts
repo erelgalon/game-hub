@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import apiClinet from "../services/api.clinet";
 import axios, { CanceledError, AxiosError } from "axios";
 
-interface Game {
+export interface Game {
   id: number;
   name: string;
+  background_image: string;
 }
 interface FetchGamesResponse {
   count: number;
