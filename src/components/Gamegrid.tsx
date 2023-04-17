@@ -7,8 +7,7 @@ import { Genre } from "../hooks/useGeneres";
 import { GameQuery } from "../App";
 
 interface Props {
-  gameQuery: GameQuery
-
+  gameQuery: GameQuery;
 }
 
 const Gamegrid = ({ gameQuery }: Props) => {
